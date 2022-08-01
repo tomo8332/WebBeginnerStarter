@@ -1,4 +1,4 @@
- TODO テーブルの構造を記述する。
+-- TODO テーブルの構造を記述する。
 
 CREATE TABLE inquiry
 (
