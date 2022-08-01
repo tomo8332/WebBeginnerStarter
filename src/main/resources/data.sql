@@ -1,3 +1,5 @@
+-- TODO データの登録を記述する。
+
 INSERT INTO inquiry(name, email, contents, created)
 VALUES('Ethan', 'sample@example.com', 'Hello', '2019-11-12 08:34:19');
 INSERT INTO inquiry(name, email, contents, created)

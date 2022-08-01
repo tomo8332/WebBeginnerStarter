@@ -1,3 +1,5 @@
+-- TODO テーブルの構造を記述する。
+
 CREATE TABLE inquiry
 (
    id INT NOT NULL AUTO_INCREMENT,
