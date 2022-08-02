@@ -29,7 +29,7 @@ public class SampleController {
 	public String test(Model model) {
 		//hands-on
 		String sql = "SELECT id, name, email "
-				+ "FROM inquiry WHERE = 1";
+				+ "FROM inquiry WHERE id = 1";
 		Map<String, Object> map = jdbcTemplate.queryForMap(sql);
 		model.addAttribute("name", map.get("name"));
 		model.addAttribute("email", map.get("email"));
