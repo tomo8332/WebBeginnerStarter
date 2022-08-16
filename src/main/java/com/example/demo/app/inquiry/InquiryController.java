@@ -38,13 +38,13 @@ public class InquiryController {
 		model.addAttribute("inquiryList", list);
 		model.addAttribute("title", "Inquiry Index");
 
-		Inquiry inquiry = new Inquiry();
-		inquiry.setId(4);
-		inquiry.setName("jamie");
-		inquiry.setEmail("sample4@example.com");
-		inquiry.setContents("Hello");
-
-		inquiryService.update(inquiry);
+//		Inquiry inquiry = new Inquiry();
+//		inquiry.setId(4);
+//		inquiry.setName("jamie");
+//		inquiry.setEmail("sample4@example.com");
+//		inquiry.setContents("Hello");
+//
+//		inquiryService.update(inquiry);
 
 //		try {
 //			inquiryService.update(inquiry);
@@ -52,7 +52,7 @@ public class InquiryController {
 //			model.addAttribute("message", e);
 //			return "error/CustomPage";
 //		}
-		return "inquiry/index";
+		return "inquiry/index_boot";
 	}
 
 	@GetMapping("/form")
@@ -61,13 +61,13 @@ public class InquiryController {
 
 		model.addAttribute("title", "Inquiry Form");
 
-		return "inquiry/form";
+		return "inquiry/form_boot";
 	}
 
 	@PostMapping("/form")
 	public String formGoBack(InquiryForm inquiryForm, Model model) {
 		model.addAttribute("title", "Inquiry Form");
-		return "inquiry/form";
+		return "inquiry/form_boot";
 	}
 
 
@@ -79,11 +79,11 @@ public class InquiryController {
 		//hands-on
 		if(result.hasErrors()) {
 			model.addAttribute("title", "Inquiry Form");
-			return  "inquiry/form";
+			return  "inquiry/form_boot";
 		}
 
 		model.addAttribute("title", "確認ページ");
-		return "inquiry/confirm";
+		return "inquiry/confirm_boot";
 	}
 
 	@PostMapping("/complete")
@@ -94,7 +94,7 @@ public class InquiryController {
 
 		if(result.hasErrors()) {
 			model.addAttribute("title", "inquiry Form");
-			return "inquiry/form";
+			return "inquiry/form_boot";
 		}
 
 		Inquiry inquiry = new Inquiry();
